@@ -1,0 +1,62 @@
+[general]
+live_config_reload = true
+
+#Import other config files
+
+import = [
+"~/.config/alacritty/color_scheme.toml", 
+]
+ipc_socket = false
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+SHELL = "/bin/bash"
+TERM = "xterm-256color"
+
+[font] 
+size = 10
+
+[font.normal]
+family = "JetBrainsMonoNL Nerd Font"
+
+[window]
+#dimensions = { columns = 600, lines = 741 }
+padding = { x = 1, y = 1 }
+dynamic_padding = true
+decorations = "None"
+opacity = 1.0
+startup_mode = "Maximized"
+dynamic_title = true
+
+[scrolling] 
+history = 10000
+multiplier = 3
+
+[colors.primary]
+foreground = "#d3dae3"
+dim_foreground = "#d3dae3"
+bright_foreground = "#00aa7f"
+background = "#1c202f"
+
+[selection]
+save_to_clipboard = true
+
+[cursor.style]
+shape = "block"
+blinking = "off"
+
+[cursor]
+vi_mode_style = "none"
+unfocused_hollow = true
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+{ key = "C", mods = "Control|Shift", action = "CopySelection" },
+{ key = "V", mods = "Control|Shift", action = "Paste" },
+{ key = "=", mods = "Control", action = "IncreaseFontSize" },
+{ key = "-", mods = "Control", action = "DecreaseFontSize" },
+{ key = "C", mods = "Control|Alt", action = "ClearHistory" },
+]
