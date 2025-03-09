@@ -1,0 +1,30 @@
+@define-color gentoo-grey rgba(221, 218, 236, 1);
+@define-color gentoo-light-purple rgba(97, 83, 141, 1);
+@define-color gentoo-purple rgba(84, 72, 122, 1);
+
+window {
+    background-color: @gentoo-grey;
+    color: @gentoo-purple;
+    border-radius: 15px 15px 15px 0px;
+}
+
+list {
+    background: @gentoo-grey;
+    color: @gentoo-purple;
+    border-radius: 15px;
+}
+
+entry {
+    color: @gentoo-grey;
+    background-color: @gentoo-light-purple;
+}
+
+button {
+    background: none;
+    color: @gentoo-purple;
+    border: none;
+}
+
+button:hover {
+    background-color: @gentoo-purple;
+}

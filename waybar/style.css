@@ -1,0 +1,220 @@
+@define-color gentoo-grey rgba(221, 218, 236, 1);
+@define-color gentoo-light-purple rgba(97, 83, 141, 1);
+@define-color gentoo-purple rgba(84, 72, 122, 1);
+@define-color waybar-background rgba(97, 83, 141, 0.5);
+@define-color gentoo-green rgba(115, 210, 22, 1);
+@define-color gentoo-red rgba(217, 83, 79, 1);
+@define-color warning #e0a009;
+
+* {
+  min-height: 0;
+  font-family: Material Design Icons, JetBrainsMono Nerd Font;
+  font-size: 15px;
+  color: @gentoo-purple;
+  background: transparent;
+}
+
+window#waybar {
+  background-color: @waybar-background;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+tooltip {
+  padding: 0px;
+  color: @gentoo-light-purple;
+  background-color: @gentoo-grey;
+}
+
+#custom-logo {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px; 
+  color: @gentoo-purple;
+  background: @gentoo-grey;
+}
+
+#custom-logo button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: @gentoo-grey;
+  background: @gentoo-grey;
+}
+
+#custom-terminal {
+  color: @gentoo-purple;
+  background-color: @gentoo-grey;
+}
+
+#custom-terminal button:hover {
+  color: @gentoo-grey;
+  background-color: @gentoo-purle;
+}
+
+#custom-thunar {
+  color: @gentoo-purple;
+  background-color: @gentoo-grey;
+}
+
+#custom-brave {
+  color: @gentoo-purple;
+  background-color: @gentoo-grey;
+}
+
+#custom-vscodium {
+  padding: 0px 10px 0px 0px;
+  margin-left: -4px;
+  color: @gentoo-purple;
+  background-color: @gentoo-grey;
+}
+
+#custom-vscodium button:hover {
+  color: @gentoo-grey;
+  background-color: @gentoo-purple;
+}
+
+#workspaces {
+  color: @gentoo-grey;
+  background: @gentoo-grey;
+}
+
+#workspaces label {
+  color: @gentoo-purple;
+  background: @gentoo-grey;
+}
+
+#workspaces button {
+  all: initial;
+  margin-right: 8px;
+  margin-left: 4px;
+  color: @gentoo-grey;
+  background: @gentoo-grey;
+}
+
+#workspaces button.active {
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  background: @font
+}
+
+/* #taskbar {
+  padding: 0px 2px;
+  color: @gentoo-light-purple;
+  background: @gentoo-grey;
+  
+}
+
+#taskbar.empty {
+  background: transparent;
+}
+
+#taskbar button {
+  padding: 0px 2px;
+}
+
+#taskbar button:hover {
+  padding: 0px 2px;
+  background: @gentoo-grey;
+} */
+
+#custom-logo, #workspaces, #taskbar {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 0px;
+  padding: 0px 0px;
+  background: @gentoo-grey
+}
+
+#clock {
+  padding: 0px 0px;
+  color: @gentoo-purple;
+  background: @gentoo-grey;
+}
+
+#tray * {
+  color: @gentoo-purple;
+  background: @gentoo-grey;
+  padding-right: 6px;
+}
+
+#tray menuitem:hover {
+  color: @gentoo-grey;
+  background: @gentoo-purple;
+}
+
+#network, #pulseaudio {
+  padding: 0px 0px 0px 0px;
+  padding-right: 10px;
+  background: @gentoo-grey;
+  color: @gentoo-purple;
+}
+
+#battery {
+  padding: 0px 10px 0px 0px;
+  background-color: @gentoo-grey;
+  color: @gentoo-purple
+}
+
+#battery.charging, #battery.charged {
+  color: @gentoo-purple;
+}
+
+#battery.warning {
+  color: @warning;
+}
+
+#battery.critical {
+  color: @gentoo-red;
+}
+
+#battery.good:not(.charging) {
+  color: @gentoo-green
+}
+
+@keyframes blink {
+  to {
+      color: @gentoo-red;
+  }
+}
+
+#custom-bluetooth {
+  padding: 0px 5px 0px 0px;
+  background: @gentoo-grey;
+  color: @gentoo-purple;
+  border: 3px;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark,
+#custom-right-arrow-light {
+  padding: 0px 0px 0px 0px;
+  font-size: 20px;
+  color: @gentoo-grey;
+  background: @gentoo-purple;
+}
+
+#custom-left-arrow-light {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 20px;
+}
+
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	color: #1a1a1a;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	color: @gentoo-grey;
+	background: transparent;
+}

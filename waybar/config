@@ -1,0 +1,178 @@
+{
+   "layer": "top",
+   "position": "bottom",
+   "spacing": 0,
+   "height": 25,
+   "width": 1366,
+
+   "group/left": {
+	"orientation": "horizontal",
+	"modules": [
+		"custom/logo",
+		"custom/terminal",
+		"custom/thunar",
+		"custom/brave",
+		"custom/vscodium",
+		"hyprland/workspaces",
+		"custom/right-arrow-light"
+	]
+   },
+
+   "group/center": {
+	"orientation": "horizontal",
+	"modules": [
+		"custom/left-arrow-light",
+		"clock",
+		"custom/right-arrow-light"
+	]
+   },
+
+   "group/right": {
+	"orientation": "horizontal",
+	"modules": [
+		"custom/left-arrow-light",
+		"network",
+		"pulseaudio",
+		"custom/bluetooth",
+		"battery"
+	]
+   },
+   
+   "custom/logo": {
+	"format": "  ",
+	"tooltip": false,
+	"on-click": "nwg-menu -d -cmd-lock hyprlock -cmd-logout hyprctl dispatch exit -s menu-start.css "
+   },
+
+   "custom/terminal": {
+	"format": "{}  ",
+    "tooltip": false,
+    "on-click": "alacritty"
+   },
+
+   "custom/thunar": {
+	"format": "{}  ",
+    "tooltip": false,
+    "on-click": "thunar"
+   },
+   
+   "custom/brave": {
+	"format": "{} 󰖟 ",
+    "tooltip": false,
+    "on-click": "brave-bin -password-store=gnome"
+   },
+
+   "custom/vscodium": {
+	"format": "{} ",
+    "tooltip": false,
+    "on-click": "vscodium"
+   },
+
+   "hyprland/workspaces": {
+	"on-click": "activate",
+	"format": "{icon}",
+	"format-icons": {
+		"active": "",
+		"default": ""
+	},
+	"persistent_workspaces": { 
+		"*":[1,2,3,4,5,6,7,8,9,10]
+	}
+   },
+
+   "wlr/taskbar": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-click-right": "minimize",
+        "on-click-middle": "minimize-raise",
+        "icon-theme": "Numix-Circle", 
+        "icon-size": 20,
+        "tooltip-format": "{title}"
+    },
+
+   "clock": {
+	"timezone": "Canada/Mountain",
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%a, %d %b %Y}",
+        "format": "{:%I:%M %p}"
+    },
+
+   "tray": {
+	"spacing": 10
+   },
+
+   "network": {
+	"format": "",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+	"format-alt": "{essid} ({signalStrength}%) "
+   },
+
+   "pulseaudio": {
+	"format": "{icon}",
+        "format-bluetooth": "{icon} {format_source}",
+        "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+        "format-muted": "󰝟",
+		"tooltip-format": "Volume {volume}%",
+	"format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+        },
+	"on-click": "pavucontrol || pkill pavucontrol"
+   },
+
+   "custom/bluetooth": {
+	"format": "",
+	"tooltip-format": "Bluetooth",
+	"on-click": "blueman-manager"
+   },
+   
+   "battery": {
+	"states": {
+		"good": 100,
+		"warning": 40,
+		"critical": 15
+	},
+	"tooltip": true,	
+	"format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+	"format-full": "",
+        "format-icons": ["", "", "", "", ""],
+		"discharging": ["", "", "", "", "", "", "", "","", ""],
+		"charging": ["", "", "", "", "", "","", ""]
+   },
+
+   "modules-left": [
+	"group/left"
+   ],
+
+   "modules-center": [
+	"custom/left-arrow-light",
+	"clock",
+	"custom/right-arrow-light"
+   ],
+
+   "modules-right": [
+	"group/right"
+   ],
+
+	"custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	}
+}
