@@ -1,0 +1,8 @@
+profile laptop {
+	output eDP-1 enable mode 1366x768
+}
+
+profile movie {
+	output eDP-1 enable mode 1366x768
+	output HDMI-1 enable mode 1366x768@60Hz
+}
